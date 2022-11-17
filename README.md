@@ -20,15 +20,13 @@
     <li>Authenticate and allow users to connect their MixMatch, Spotify and/or Apple Music accounts and upload an existing playlist from their Spotify/Apple Music account to the MixMatch DB, accessible from their 'Playlist Library'</li>
     <li>Uploaded playlists will be able to be made private or public to all platform users</li>
     <li>A user will be able to select a playlist in their 'Playlist Library' and create an identical playlist on their alternative music-streaming service account
-    </li>
-    <li>
         <ul>
             <li><strong>Authenticate stage</strong> - User prompted to login to selected target music streaming service, if user already logged into target streaming service account skip this stage</li>
             <li><strong>Check stage</strong> -Checks will need to be done on each song in the playlist to check if it exists in the other service's DB</li>
             <li><strong>Accept stage</strong> - A new compatible playlist will be formulated minus any un-compatible songs and user will be notified of un-compatible songs in playlist and prompted to continue or cancel upload</li>
             <li><strong>Upload stage</strong> - Compatibility checked playlist uploaded to streaming service account using corresponding API given user has been authenticated</li>
         </ul>
-    </li> 
+    </li>
     <li>Users will be able to share their saved playlists so their friends can easily access and download their playlists between streaming services, possibly email/social media functionality but at v1 stage just link to specific MixMatch playlist page</li>
     <li>All users will have access to MixMatch 'Masterlist' where they can browse and access all public playlists users have uploaded, playlist search functionality (via playlist title)</li>
 </ul>
@@ -48,4 +46,3 @@
     <li>B: Add profile status posts ability (liking functionality too?)</li>
     <li>C: Add connection to Deezer (if time)</li>
 </ul>
-

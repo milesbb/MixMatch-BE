@@ -42,7 +42,7 @@
 <h2 align="center">v3. Final Additional Features</h2>
 
 <ul>
-    <li>A: Add sharing playlist functionality (twitter initially, others if time) (shares link, playlist info, message, and MixMatch branding in post on relevant social media platform)</li>
-    <li>B: Add profile status posts ability (liking functionality too?)</li>
-    <li>C: Add connection to Deezer (if time)</li>
+    <li>D: Add sharing playlist functionality (twitter initially, others if time) (shares link, playlist info, message, and MixMatch branding in post on relevant social media platform)</li>
+    <li>E: Add profile status posts ability (liking functionality too?)</li>
+    <li>F: Add connection to Deezer (if time)</li>
 </ul>

@@ -27,22 +27,22 @@
             <li><strong>Upload stage</strong> - Compatibility checked playlist uploaded to streaming service account using corresponding API given user has been authenticated</li>
         </ul>
     </li>
-    <li>Users will be able to share their saved playlists so their friends can easily access and download their playlists between streaming services, possibly email/social media functionality but at v1 stage just link to specific MixMatch playlist page</li>
-    <li>All users will have access to MixMatch 'Masterlist' where they can browse and access all public playlists users have uploaded, playlist search functionality (via playlist title)</li>
 </ul>
 
 <h2 align="center">v2. Additional Features</h2>
 
 <ul>
-    <li>A: MixMatch 'Studio' - Allow users to add/remove songs from their saves playlists within the app, CRUD with playlist MixMatch DB, adding songs functionality could use Deezer api to authenticate that song is real due to large Deezer db</li>
-    <li>B: Implement 'likes' and 'favourites' system for public playlists on MixMatch 'Masterlist', reference in User data entries</li>
-    <li>C: Implement 'following' functionality and more in-depth profile page (shows playlists, likes, favourites, followers, following), profile picture upload too if not already added</li>
+    <li>A: Users will be able to share their saved playlists so their friends can easily access and download their playlists between streaming services, possibly email/social media functionality but at v1 stage just link to specific MixMatch playlist page</li>
+    <li>B: All users will have access to MixMatch 'Masterlist' where they can browse and access all public playlists users have uploaded, playlist search functionality (via playlist title)</li>
+    <li>C: MixMatch 'Studio' - Allow users to add/remove songs from their saves playlists within the app, CRUD with playlist MixMatch DB, adding songs functionality could use Deezer api to authenticate that song is real due to large Deezer db</li>
 </ul>
 
 <h2 align="center">v3. Final Additional Features</h2>
 
 <ul>
-    <li>D: Add sharing playlist functionality (twitter initially, others if time) (shares link, playlist info, message, and MixMatch branding in post on relevant social media platform)</li>
-    <li>E: Add profile status posts ability (liking functionality too?)</li>
-    <li>F: Add connection to Deezer (if time)</li>
+    <li>D: Implement 'likes' and 'favourites' system for public playlists on MixMatch 'Masterlist', reference in User data entries</li>
+    <li>E: Implement 'following' functionality and more in-depth profile page (shows playlists, likes, favourites, followers, following), profile picture upload too if not already added</li>
+    <li>F: Add sharing playlist functionality (twitter initially, others if time) (shares link, playlist info, message, and MixMatch branding in post on relevant social media platform)</li>
+    <li>G: Add profile status posts ability (liking functionality too?)</li>
+    <li>H: Add connection to Deezer (if time)</li>
 </ul>

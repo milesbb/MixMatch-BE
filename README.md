@@ -12,7 +12,7 @@
 
 <p align="center">Through dynamic use of Spotify, Apple Music, etc... API's, MixMatch will be able to offer you a simple and clean way to preserve, move, and share your favorite playlists!</p>
 
-<p align="center">Primary technologies: Node.js, Express.js, Spotify API, Apple Music API, MongoDB, and more tbd during development...</p>
+<p align="center">Primary technologies: Typescript, Node.js, Express.js, Spotify API, Apple Music API, MongoDB, and more tbd during development...</p>
 
 <h2 align="center">v1. Core Features</h2>
 

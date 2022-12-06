@@ -59,6 +59,27 @@ usersRouter.get(
   }
 );
 
+// GET MY PLAYLISTS
+
+usersRouter.get(
+  "/me",
+  JwtAuthenticationMiddleware,
+  async (req: UserRequest, res, next) => {
+    try {
+      if (req.user) {
+        const me = await UsersModel.findById(req.user._id);
+        if (me) {
+          res.send(me);
+        }
+      } else {
+        createHttpError(404, "user not found");
+      }
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
 // EDIT ME
 
 usersRouter.put(
@@ -109,7 +130,7 @@ usersRouter.post("/account", async (req, res, next) => {
     const newUserPre = {
       ...req.body,
       avatar: `https://ui-avatars.com/api/?name=${req.body.username}`,
-      playlists: []
+      playlists: [],
     };
 
     const newUser = new UsersModel(newUserPre);
@@ -128,7 +149,7 @@ usersRouter.post("/session", async (req, res, next) => {
     const { email, password } = req.body;
 
     const user = await UsersModel.checkCredentials(email, password);
-    console.log(user)
+    console.log(user);
     if (user) {
       const { accessToken, refreshToken } = await createTokens(user);
       res.send({ accessToken, refreshToken, user });

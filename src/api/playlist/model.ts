@@ -1,30 +1,49 @@
-// import mongoose from "mongoose";
-// import { Chat, ChatsDocument, ChatsModel, Message } from "./types";
+import mongoose from "mongoose";
+import { PlaylistDocument, PlaylistModel } from "./types";
 
-// const { Schema, model } = mongoose;
+const { Schema, model } = mongoose;
 
-// const MessageSchema = new Schema(
-//   {
-//     sender: { type: String, required: true },
-//     content: {
-//       text: { type: String, required: false },
-//       media: { type: String, required: false },
-//     },
-//     timestamp: { type: String, required: false },
-//   },
-//   {
-//     timestamps: false,
-//   }
-// );
+const AlbumImageSchema = new Schema({
+  height: { type: Number, required: true },
+  url: { type: String, required: true },
+  width: { type: Number, required: true },
+});
 
-// const ChatSchema = new Schema(
-//   {
-//     members: [{ type: Schema.Types.ObjectId, ref: "User" }],
-//     messages: [MessageSchema],
-//   },
-//   {
-//     timestamps: false,
-//   }
-// );
+const ArtistSchema = new Schema({
+  name: { type: String, required: true },
+});
 
-// export default model<ChatsDocument, ChatsModel>("Chat", ChatSchema);
+const TrackSchema = new Schema(
+  {
+    track: {
+      album: {
+        name: { type: String, required: true },
+        images: [AlbumImageSchema],
+      },
+      artists: [ArtistSchema],
+      name: { type: String, required: true },
+      preview_url: { type: String, required: false },
+    },
+  },
+  {
+    timestamps: false,
+  }
+);
+
+const PlaylistSchema = new Schema(
+  {
+    user: { type: Schema.Types.ObjectId, ref: "User" },
+    playlist: {
+      tracks: [TrackSchema],
+      name: { type: String, required: true },
+    },
+  },
+  {
+    timestamps: false,
+  }
+);
+
+export default model<PlaylistDocument, PlaylistModel>(
+  "Playlist",
+  PlaylistSchema
+);

@@ -9,6 +9,7 @@ import {
 } from "./errorHandler";
 import mongoose from "mongoose";
 import usersRouter from "./api/user";
+import playlistRouter from "./api/playlist";
 
 const server = express();
 const port = process.env.PORT || 3001;
@@ -22,12 +23,13 @@ server.use(
 
 server.use(express.json());
 
-server.use("/users", usersRouter)
+server.use("/users", usersRouter);
+server.use("/playlists", playlistRouter);
 
-server.use(forbiddenErrorHandler)
-server.use(genericErrorHandler)
-server.use(notFoundErrorHandler)
-server.use(unauthorizedErrorHandler)
+server.use(forbiddenErrorHandler);
+server.use(genericErrorHandler);
+server.use(notFoundErrorHandler);
+server.use(unauthorizedErrorHandler);
 
 mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING!);
 
